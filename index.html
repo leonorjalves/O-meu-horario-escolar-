@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O Meu Horário Escolar - AGML</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #222222;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 15px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            width: 100px;
+            height: auto;
+        }
+
+        h1, h2 {
+            color: #17365d;
+            text-align: center;
+        }
+
+        .tabela-container {
+            width: 100%;
+            max-width: 1000px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            text-align: center;
+        }
+
+        th, td {
+            border: 2px solid white;
+            padding: 18px 12px;
+            min-width: 130px;
+        }
+
+        th {
+            background-color: #17365d;
+            color: white;
+        }
+
+        td {
+            height: 90px;
+            vertical-align: middle;
+        }
+
+        /* Cores das disciplinas */
+
+        .port {
+            background-color: #f8caca;
+            color: #8b0000;
+        }
+
+        .mat {
+            background-color: #c9dcff;
+            color: #003399;
+        }
+
+        .bio {
+            background-color: #d9f2d9;
+            color: #145214;
+        }
+
+        .ai {
+            background-color: #e7d4ff;
+            color: #510b91;
+        }
+
+        .ef {
+            background-color: #ffe2b8;
+            color: #854400;
+        }
+
+        .vazio {
+            background-color: #e8edf2;
+            color: #657383;
+        }
+
+        .disciplina {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .hora {
+            display: block;
+            margin-top: 8px;
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+        .legenda {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 25px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .legenda ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .legenda li {
+            padding: 10px 14px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #526477;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            th, td {
+                padding: 12px 8px;
+                min-width: 115px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="imagens/agml.png" alt="Logótipo do AGML">
+        <h1>O Meu Horário Escolar</h1>
+        <p>Agrupamento de Escolas do Monte da Lua</p>
+    </header>
+
+    <main>
+        <h2>Horário Semanal</h2>
+
+        <div class="tabela-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tempos</th>
+                        <th>Segunda-feira</th>
+                        <th>Terça-feira</th>
+                        <th>Quarta-feira</th>
+                        <th>Quinta-feira</th>
+                        <th>Sexta-feira</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Aula 1</th>
+
+                        <td class="port">
+                            <span class="disciplina">Português</span>
+                            <span class="hora">08:50 - 09:40</span>
+                        </td>
+
+                        <td class="ai">
+                            <span class="disciplina">Aplicações Informáticas</span>
+                            <span class="hora">08:00 - 09:40</span>
+                        </td>
+
+                        <td class="ef">
+                            <span class="disciplina">Educação Física</span>
+                            <span class="hora">08:00 - 09:40</span>
+                        </td>
+
+                        <td class="vazio">—</td>
+
+                        <td class="vazio">—</td>
+                    </tr>
+
+                    <tr>
+                        <th>Aula 2</th>
+
+                        <td class="mat">
+                            <span class="disciplina">Matemática</span>
+                            <span class="hora">10:00 - 11:40</span>
+                        </td>
+
+                        <td class="port">
+                            <span class="disciplina">Português</span>
+                            <span class="hora">10:00 - 11:40</span>
+                        </td>
+
+                        <td class="mat">
+                            <span class="disciplina">Matemática</span>
+                            <span class="hora">10:00 - 10:50</span>
+                        </td>
+
+                        <td class="ef">
+                            <span class="disciplina">Educação Física</span>
+                            <span class="hora">14:30 - 15:20</span>
+                        </td>
+
+                        <td class="bio">
+                            <span class="disciplina">Biologia</span>
+                            <span class="hora">10:50 - 11:40</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Aula 3</th>
+
+                        <td class="bio">
+                            <span class="disciplina">Biologia</span>
+                            <span class="hora">11:50 - 12:40</span>
+                        </td>
+
+                        <td class="mat">
+                            <span class="disciplina">Matemática</span>
+                            <span class="hora">11:50 - 12:40</span>
+                        </td>
+
+                        <td class="port">
+                            <span class="disciplina">Português</span>
+                            <span class="hora">10:50 - 11:40</span>
+                        </td>
+
+                        <td class="mat">
+                            <span class="disciplina">Matemática</span>
+                            <span class="hora">15:30 - 17:25</span>
+                        </td>
+
+                        <td class="bio">
+                            <span class="disciplina">Biologia</span>
+                            <span class="hora">11:50 - 12:40</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Aula 4</th>
+
+                        <td class="vazio">—</td>
+                        <td class="vazio">—</td>
+                        <td class="vazio">—</td>
+
+                        <td class="ai">
+                            <span class="disciplina">Aplicações Informáticas</span>
+                            <span class="hora">17:25 - 18:15</span>
+                        </td>
+
+                        <td class="vazio">—</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section class="legenda">
+            <h2>Legenda das Disciplinas</h2>
+
+            <ul>
+                <li class="port">Português</li>
+                <li class="mat">Matemática</li>
+                <li class="bio">Biologia</li>
+                <li class="ai">Aplicações Informáticas</li>
+                <li class="ef">Educação Física</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Trabalho de HTML e CSS | Ano letivo 2026/2027</p>
+    </footer>
+
+</body>
+</html>
